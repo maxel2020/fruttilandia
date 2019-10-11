@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Math</title>
+</head>
+<style>
+    p{
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width: 60px;
+        height: 20px;
+        background: white;
+        font-size: 20px;
+        color:darkgrey;
+    }
+    body{
+        background: darkgrey;
+    }
+    div{
+        text-align:center;
+    }
+    div2{
+        position: relative;
+        left: 45%;
+        top: 10px;
+    }
+button{
+    height: 50px;
+    width: 120px;
+    background: white;
+    color: blue;
+    font-size: 20px;
+}
+</style>
+<body>
+    <div>
+<input id="value1" type="int" />
+<input id="value2" type="int" />
+</div>
+
+<div>
+<input id="value3" type="int" />
+<input id="value4" type="int" />
+</div>
+
+<div>
+<input id="value5" type="int" />
+<input id="value6" type="int" />
+</div>
+
+<div>
+
+<input id="value7" type="int" />
+<input id="value8" type="int" />
+</div>
+
+<div2>
+<button type="submit" onclick="output();">find average</button>
+<br>
+<br>
+<button type="submit" onclick="range();">find range</button>
+<br>
+<br>
+<button type="submit" onclick="min();">find min</button>
+<button type="submit" onclick="max();">find max</button>
+<p id="result">results</p>
+</div2>
+<script>
+
+function output(){
+    var value1 = parseInt(document.getElementById('value1').value);
+    var value2 = parseInt(document.getElementById('value2').value);
+    var value3 = parseInt(document.getElementById('value3').value);
+    var value4 = parseInt(document.getElementById('value4').value);
+    var value5 = parseInt(document.getElementById('value5').value);
+    var value6 = parseInt(document.getElementById('value6').value);
+    var value7 = parseInt(document.getElementById('value7').value);
+    var value8 = parseInt(document.getElementById('value8').value);
+
+    document.getElementById('result').innerHTML = (value1 + value2 + value3 + value4 + value5 + value6 + value7 + value8) / 8  ;
+}
+
+function range(){
+    var value1 = parseInt(document.getElementById('value1').value);
+    var value2 = parseInt(document.getElementById('value2').value);
+    var value3 = parseInt(document.getElementById('value3').value);
+    var value4 = parseInt(document.getElementById('value4').value);
+    var value5 = parseInt(document.getElementById('value5').value);
+    var value6 = parseInt(document.getElementById('value6').value);
+    var value7 = parseInt(document.getElementById('value7').value);
+    var value8 = parseInt(document.getElementById('value8').value);
+
+    var ans = Math.max(value1,value2,value3,value4,value5,value6,value7,value8);
+    var ans2 = Math.min(value1,value2,value3,value4,value5,value6,value7,value8);
+
+    document.getElementById('result').innerHTML = ans - ans2;
+}
+
+function min(){
+    var value1 = parseInt(document.getElementById('value1').value);
+    var value2 = parseInt(document.getElementById('value2').value);
+    var value3 = parseInt(document.getElementById('value3').value);
+    var value4 = parseInt(document.getElementById('value4').value);
+    var value5 = parseInt(document.getElementById('value5').value);
+    var value6 = parseInt(document.getElementById('value6').value);
+    var value7 = parseInt(document.getElementById('value7').value);
+    var value8 = parseInt(document.getElementById('value8').value);
+
+    document.getElementById('result').innerHTML = Math.min(value1,value2,value3,value4,value5,value6,value7,value8);
+}
+
+function max(){
+    var value1 = parseInt(document.getElementById('value1').value);
+    var value2 = parseInt(document.getElementById('value2').value);
+    var value3 = parseInt(document.getElementById('value3').value);
+    var value4 = parseInt(document.getElementById('value4').value);
+    var value5 = parseInt(document.getElementById('value5').value);
+    var value6 = parseInt(document.getElementById('value6').value);
+    var value7 = parseInt(document.getElementById('value7').value);
+    var value8 = parseInt(document.getElementById('value8').value);
+
+    document.getElementById('result').innerHTML = Math.max(value1,value2,value3,value4,value5,value6,value7,value8);
+}
+</script>
+</body>
+</html>
